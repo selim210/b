@@ -1,0 +1,200 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Network_setup.gd" type="Script" id=1]
+[ext_resource path="res://Base_font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Game Name.tres" type="DynamicFont" id=3]
+[ext_resource path="res://shadow.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.690196, 0.239216, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.603922, 0.211765, 0, 1 )
+border_blend = true
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.780392, 0.270588, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.690196, 0.239216, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.603922, 0.211765, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.780392, 0.270588, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.780392, 0.270588, 0, 1 )
+border_blend = true
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+
+[node name="Network_setup" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Multiplayer_configure" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Multiplayer_configure"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Multiplayer_configure/Panel"]
+margin_left = -0.0371704
+margin_right = 1919.96
+margin_bottom = 1080.0
+color = Color( 1, 0.329412, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background Name" type="ColorRect" parent="Multiplayer_configure/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -367.0
+margin_top = 16.0
+margin_right = 366.0
+margin_bottom = 201.0
+color = Color( 0.780392, 0.270588, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shadow" type="ColorRect" parent="Multiplayer_configure/Panel/Background Name"]
+margin_top = 163.0
+margin_right = 733.0
+margin_bottom = 185.0
+color = Color( 0.52549, 0.2, 0.0509804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Multiplayer_configure/Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -428.0
+margin_top = 16.0
+margin_right = 428.0
+margin_bottom = 183.0
+custom_fonts/font = ExtResource( 3 )
+text = "MultiShot"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Create server" type="Button" parent="Multiplayer_configure"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -267.5
+margin_top = -16.0
+margin_right = 267.5
+margin_bottom = 160.0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = ExtResource( 2 )
+text = "Create server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="Multiplayer_configure/Create server"]
+margin_top = 161.0
+margin_right = 535.0
+margin_bottom = 176.0
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Join_server" type="Button" parent="Multiplayer_configure"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -267.0
+margin_top = 200.0
+margin_right = 267.5
+margin_bottom = 376.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = ExtResource( 2 )
+text = "Join Server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Multiplayer_configure/Join_server"]
+margin_top = 161.0
+margin_right = 534.0
+margin_bottom = 176.0
+color = Color( 0.52549, 0.2, 0.0509804, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Server_ip_address" type="LineEdit" parent="Multiplayer_configure"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -431.0
+margin_top = -277.0
+margin_right = 431.0
+margin_bottom = -173.0
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = ExtResource( 2 )
+align = 1
+placeholder_text = "enter ip address"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Multiplayer_configure/Server_ip_address"]
+margin_left = -0.381104
+margin_top = 89.0493
+margin_right = 861.619
+margin_bottom = 129.049
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Device_ip_address" type="Label" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -150.0
+margin_right = 0.00012207
+custom_fonts/font = ExtResource( 2 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Multiplayer_configure/Create server" to="." method="_on_Create_server_pressed"]
+[connection signal="pressed" from="Multiplayer_configure/Join_server" to="." method="_on_Join_server_pressed"]
